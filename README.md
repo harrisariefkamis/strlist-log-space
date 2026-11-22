@@ -1,6 +1,6 @@
 # strlist-space-log
 
-Lab kecil untuk poin **"String dan List: Mengubah Teks Mentah Menjadi Data"**.
+space kecil untuk poin **"String dan List: Mengubah Teks Mentah Menjadi Data"**.
 Log mentah (teks `auth.log` dan JSON dari beberapa produk keamanan) diubah menjadi data seragam,
 disimpan di **SQLite**, lalu diuji dengan aturan deteksi sederhana. Cocok dijalankan di **VS Code**
 tanpa server database dan tanpa pustaka pihak ketiga (hanya pustaka standar Python).
