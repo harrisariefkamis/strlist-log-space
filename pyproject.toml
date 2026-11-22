@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "strlist-lab"
+version = "0.1.0"
+description = "Lab 'String dan List': ubah log mentah (teks/JSON) menjadi data di SQLite, lalu uji aturan deteksi sederhana."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []          # sengaja kosong: hanya pustaka standar Python
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[project.scripts]
+strlab = "strlist_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: butuh dataset publik di data/external (otomatis dilewati bila tidak ada)"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
